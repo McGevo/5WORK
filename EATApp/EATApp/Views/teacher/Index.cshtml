@@ -8,45 +8,47 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <div align="right">
+        @Html.TextBox("MockDateCreated", DateTime.Today.Date, new { @disabled = "disabled", @style = "border: none;" })
+        @Html.Hidden("DateCreated", DateTime.Today)
+    </div>
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.SignIn)
+            StudentID
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SignOut)
+            StudentName
+        </th>
+
+        <th>
+            Session 1
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Session.Date)
+            Session 2
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Student.FirstName)
-        </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.SignIn)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SignOut)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Session.Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Student.FirstName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.StudentID)
+    </td>
+    <td>
+        @{ var fullName = item.Student.FirstName + " " + item.Student.Surname;
+            @Html.DisplayFor(modelItem => fullName)}
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SignIn)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SignOut)
+    </td>
+    <td>
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })
+    </td>
+</tr>
 }
 
 </table>
