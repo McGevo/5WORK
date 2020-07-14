@@ -23,6 +23,7 @@ namespace EATApp.Models
         public string SessionID { get; set; }
         public string Date { get; set; }
         public string StartTime { get; set; }
+        public string SessionCode { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<StudentSession> StudentSessions { get; set; }
