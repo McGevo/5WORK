@@ -11,18 +11,18 @@ using EATApp.Models;
 
 namespace EATApp.Controllers
 {
-    public class teacherController : Controller
+    public class TeacherController : Controller
     {
         private EATModelEntities1 db = new EATModelEntities1();
 
-        // GET: teacher
+        // GET: Teacher
         public async Task<ActionResult> Index()
         {
             var studentSessions = db.StudentSessions.Include(s => s.Session).Include(s => s.Student);
             return View(await studentSessions.ToListAsync());
         }
 
-        // GET: teacher/Details/5
+        // GET: Teacher/Details/5
         public async Task<ActionResult> Details(string id)
         {
             if (id == null)
@@ -37,7 +37,7 @@ namespace EATApp.Controllers
             return View(studentSession);
         }
 
-        // GET: teacher/Create
+        // GET: Teacher/Create
         public ActionResult Create()
         {
             ViewBag.SessionID = new SelectList(db.Sessions, "SessionID", "Date");
@@ -45,7 +45,7 @@ namespace EATApp.Controllers
             return View();
         }
 
-        // POST: teacher/Create
+        // POST: Teacher/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -64,7 +64,7 @@ namespace EATApp.Controllers
             return View(studentSession);
         }
 
-        // GET: teacher/Edit/5
+        // GET: Teacher/Edit/5
         public async Task<ActionResult> Edit(string id)
         {
             if (id == null)
@@ -81,7 +81,7 @@ namespace EATApp.Controllers
             return View(studentSession);
         }
 
-        // POST: teacher/Edit/5
+        // POST: Teacher/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -99,7 +99,7 @@ namespace EATApp.Controllers
             return View(studentSession);
         }
 
-        // GET: teacher/Delete/5
+        // GET: Teacher/Delete/5
         public async Task<ActionResult> Delete(string id)
         {
             if (id == null)
@@ -114,7 +114,7 @@ namespace EATApp.Controllers
             return View(studentSession);
         }
 
-        // POST: teacher/Delete/5
+        // POST: Teacher/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(string id)

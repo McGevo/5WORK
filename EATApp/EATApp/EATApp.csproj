@@ -254,6 +254,9 @@
     <Content Include="Views\Home\LoginView.cshtml" />
     <Content Include="Views\teacher\Create.cshtml" />
     <Content Include="Views\teacher\Index.cshtml" />
+    <Content Include="Views\teacher\Delete.cshtml" />
+    <Content Include="Views\teacher\Details.cshtml" />
+    <Content Include="Views\teacher\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

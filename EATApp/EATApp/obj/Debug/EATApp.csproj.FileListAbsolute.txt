@@ -477,4 +477,3 @@ C:\Users\Owner\Desktop\5WORK\EATApp\EATApp\obj\Debug\EATApp.csproj.CoreCompileIn
 C:\Users\Owner\Desktop\5WORK\EATApp\EATApp\obj\Debug\EATApp.csproj.CopyComplete
 C:\Users\Owner\Desktop\5WORK\EATApp\EATApp\obj\Debug\EATApp.dll
 C:\Users\Owner\Desktop\5WORK\EATApp\EATApp\obj\Debug\EATApp.pdb
-C:\Users\Owner\Desktop\5WORK\EATApp\EATApp\obj\Debug\EATApp.csprojAssemblyReference.cache
