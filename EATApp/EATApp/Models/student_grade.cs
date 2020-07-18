@@ -12,14 +12,17 @@ namespace EATApp.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class studentsession
+    public partial class student_grade
     {
-        public string SignIn { get; set; }
-        public string SignOut { get; set; }
-        public int session_sessionID { get; set; }
-        public string student_StudentID { get; set; }
+        public string StudentID { get; set; }
+        public string CRN { get; set; }
+        public int TermCode { get; set; }
+        public int TermYear { get; set; }
+        public string Grade { get; set; }
+        public Nullable<System.DateTime> GradeDate { get; set; }
     
-        public virtual session session { get; set; }
+        public virtual crn_detail crn_detail { get; set; }
         public virtual student student { get; set; }
+        public virtual term_datetime term_datetime { get; set; }
     }
 }

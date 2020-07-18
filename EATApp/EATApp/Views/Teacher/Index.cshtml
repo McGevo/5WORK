@@ -1,0 +1,53 @@
+﻿@model IEnumerable<EATApp.Models.studentsession>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <div align="right">
+        @Html.TextBox("MockDateCreated", DateTime.Today.Date, new { @disabled = "disabled", @style = "border: none;" })
+        @Html.Hidden("DateCreated", DateTime.Today)
+    </div>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            StudentID
+        </th>
+        <th>
+            StudentName
+        </th>
+
+        <th>
+            Session 1
+        </th>
+        <th>
+            Session 2
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.student_StudentID)
+            </td>
+            <td>
+                @{ var fullName = item.student.GivenName + " " + item.student.LastName;
+                    @Html.DisplayFor(modelItem => fullName)}
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SignIn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SignOut)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { student_StudentID = item.student_StudentID, session_sessionID = item.session_sessionID })
+            </td>
+        </tr>
+    }
+</table>

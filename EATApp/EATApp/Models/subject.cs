@@ -12,26 +12,27 @@ namespace EATApp.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class student
+    public partial class subject
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public student()
+        public subject()
         {
-            this.student_grade = new HashSet<student_grade>();
-            this.student_studyplan = new HashSet<student_studyplan>();
-            this.studentsessions = new HashSet<studentsession>();
+            this.crn_detail = new HashSet<crn_detail>();
+            this.studyplan_subject = new HashSet<studyplan_subject>();
+            this.subject_qualification = new HashSet<subject_qualification>();
+            this.competencies = new HashSet<competency>();
         }
     
-        public string StudentID { get; set; }
-        public string GivenName { get; set; }
-        public string LastName { get; set; }
-        public string EmailAddress { get; set; }
+        public string SubjectCode { get; set; }
+        public string SubjectDescription { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<student_grade> student_grade { get; set; }
+        public virtual ICollection<crn_detail> crn_detail { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<student_studyplan> student_studyplan { get; set; }
+        public virtual ICollection<studyplan_subject> studyplan_subject { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<studentsession> studentsessions { get; set; }
+        public virtual ICollection<subject_qualification> subject_qualification { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<competency> competencies { get; set; }
     }
 }

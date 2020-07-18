@@ -12,26 +12,21 @@ namespace EATApp.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class student
+    public partial class campu
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public student()
+        public campu()
         {
-            this.student_grade = new HashSet<student_grade>();
-            this.student_studyplan = new HashSet<student_studyplan>();
-            this.studentsessions = new HashSet<studentsession>();
+            this.crn_detail = new HashSet<crn_detail>();
+            this.crn_session_timetable = new HashSet<crn_session_timetable>();
         }
     
-        public string StudentID { get; set; }
-        public string GivenName { get; set; }
-        public string LastName { get; set; }
-        public string EmailAddress { get; set; }
+        public string CampusCode { get; set; }
+        public string CampusName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<student_grade> student_grade { get; set; }
+        public virtual ICollection<crn_detail> crn_detail { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<student_studyplan> student_studyplan { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<studentsession> studentsessions { get; set; }
+        public virtual ICollection<crn_session_timetable> crn_session_timetable { get; set; }
     }
 }

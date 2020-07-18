@@ -12,21 +12,18 @@ namespace EATApp.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class session
+    public partial class competency_type
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public session()
+        public competency_type()
         {
-            this.studentsessions = new HashSet<studentsession>();
+            this.competency_qualification = new HashSet<competency_qualification>();
         }
     
-        public int sessionID { get; set; }
-        public string Date { get; set; }
-        public System.TimeSpan StartTime { get; set; }
-        public string LecturerID { get; set; }
+        public string CompTypeCode { get; set; }
+        public string CompTypeDescription { get; set; }
     
-        public virtual lecturer lecturer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<studentsession> studentsessions { get; set; }
+        public virtual ICollection<competency_qualification> competency_qualification { get; set; }
     }
 }

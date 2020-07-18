@@ -12,21 +12,20 @@ namespace EATApp.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class session
+    public partial class studyplan_qualification
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public session()
+        public studyplan_qualification()
         {
-            this.studentsessions = new HashSet<studentsession>();
+            this.studyplan_subject = new HashSet<studyplan_subject>();
         }
     
-        public int sessionID { get; set; }
-        public string Date { get; set; }
-        public System.TimeSpan StartTime { get; set; }
-        public string LecturerID { get; set; }
+        public string StudyPlanCode { get; set; }
+        public string QualCode { get; set; }
+        public int Priority { get; set; }
     
-        public virtual lecturer lecturer { get; set; }
+        public virtual qualification qualification { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<studentsession> studentsessions { get; set; }
+        public virtual ICollection<studyplan_subject> studyplan_subject { get; set; }
     }
 }
