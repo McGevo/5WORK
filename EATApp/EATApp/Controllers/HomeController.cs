@@ -8,14 +8,20 @@ namespace EATApp.Controllers
 {
     public class HomeController : Controller
     {
-        
-
-        public ActionResult LoginView()
+        // GET: Home
+        public ActionResult HomeView()
         {
-            ViewBag.Message = "LoginView Page";
-
             return View();
         }
 
+        public ActionResult LecturerLoginPage()
+        {
+            return RedirectToAction("LoginView", "Login");
+        }
+
+        public ActionResult StudentLoginPage()
+        {
+            return RedirectToAction("StudentLoginView", "StudentLogin");
+        }
     }
 }

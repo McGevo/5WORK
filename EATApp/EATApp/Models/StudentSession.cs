@@ -12,14 +12,14 @@ namespace EATApp.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class StudentSession
+    public partial class studentsession
     {
-        public string SessionID { get; set; }
-        public int StudentID { get; set; }
         public string SignIn { get; set; }
         public string SignOut { get; set; }
+        public int session_sessionID { get; set; }
+        public string student_StudentID { get; set; }
     
-        public virtual Session Session { get; set; }
-        public virtual Student Student { get; set; }
+        public virtual session session { get; set; }
+        public virtual student student { get; set; }
     }
 }

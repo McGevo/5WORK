@@ -129,34 +129,87 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentLoginController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AttendanceModel.Context.cs">
+    <Compile Include="Models\campu.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\competency.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\competency_qualification.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\competency_type.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\crn_detail.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\crn_session_timetable.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\day_of_week.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\department.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EATDataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AttendanceModel.Context.tt</DependentUpon>
+      <DependentUpon>EATDataModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\AttendanceModel.cs">
+    <Compile Include="Models\EATDataModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AttendanceModel.tt</DependentUpon>
+      <DependentUpon>EATDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\AttendanceModel.Designer.cs">
+    <Compile Include="Models\EATDataModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AttendanceModel.edmx</DependentUpon>
+      <DependentUpon>EATDataModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Session.cs">
-      <DependentUpon>AttendanceModel.tt</DependentUpon>
+    <Compile Include="Models\lecturer.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Student.cs">
-      <DependentUpon>AttendanceModel.tt</DependentUpon>
+    <Compile Include="Models\qualification.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\StudentSession.cs">
-      <DependentUpon>AttendanceModel.tt</DependentUpon>
+    <Compile Include="Models\session.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\student.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\studentsession.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\student_grade.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\student_studyplan.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\studyplan_qualification.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\studyplan_subject.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\subject.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\subject_qualification.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\term_datetime.cs">
+      <DependentUpon>EATDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -165,28 +218,29 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\adelaide-city.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\AttendanceModel.Context.tt">
+    <Content Include="Models\EATDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AttendanceModel.Context.cs</LastGenOutput>
-      <DependentUpon>AttendanceModel.edmx</DependentUpon>
+      <DependentUpon>EATDataModel.edmx</DependentUpon>
+      <LastGenOutput>EATDataModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\AttendanceModel.tt">
+    <Content Include="Models\EATDataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AttendanceModel.edmx</DependentUpon>
-      <LastGenOutput>AttendanceModel.cs</LastGenOutput>
+      <DependentUpon>EATDataModel.edmx</DependentUpon>
+      <LastGenOutput>EATDataModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\AttendanceModel.edmx">
+    <EntityDeploy Include="Models\EATDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AttendanceModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>EATDataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\AttendanceModel.edmx.diagram">
-      <DependentUpon>AttendanceModel.edmx</DependentUpon>
+    <Content Include="Models\EATDataModel.edmx.diagram">
+      <DependentUpon>EATDataModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -213,7 +267,9 @@
     <Content Include="Views\Teacher\StudentView.cshtml" />
     <Content Include="Views\Teacher\ClassView.cshtml" />
     <Content Include="Views\Student\SignInView.cshtml" />
-    <Content Include="Views\Home\LoginView.cshtml" />
+    <Content Include="Views\Login\LoginView.cshtml" />
+    <Content Include="Views\Home\HomeView.cshtml" />
+    <Content Include="Views\StudentLogin\StudentLoginView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
