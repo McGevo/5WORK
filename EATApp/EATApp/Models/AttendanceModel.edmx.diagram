@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="72a3233ba12b4155bf33205e76f6a26f" Name="Diagram1">
+      <Diagram DiagramId="01b1cf25829e48e3990791ee45877109" Name="Diagram1">
         <EntityTypeShape EntityType="TafeDBModel.campu" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
         <EntityTypeShape EntityType="TafeDBModel.competency" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
         <EntityTypeShape EntityType="TafeDBModel.competency_qualification" Width="1.5" PointX="13" PointY="1.875" IsExpanded="true" />

@@ -31,7 +31,7 @@ namespace EATApp.Controllers
                 else
                 {
                     Session["userID"] = userDetails.LecturerID;
-                    return RedirectToAction("ClassView", "Teacher");
+                    return RedirectToAction("Index", "Teacher");
                 }
             }
 

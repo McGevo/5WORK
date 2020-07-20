@@ -64,32 +64,7 @@ namespace EATApp.Controllers
             return View(studentsessions);
         }
 
-        // GET: Teacher/Create
-        public ActionResult Create()
-        {
-            ViewBag.session_sessionID = new SelectList(db.sessions, "sessionID", "Date");
-            ViewBag.student_StudentID = new SelectList(db.students, "StudentID", "GivenName");
-            return View();
-        }
-
-        // POST: Teacher/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SignIn,SignOut,session_sessionID,student_StudentID")] studentsession studentsession)
-        {
-            if (ModelState.IsValid)
-            {
-                db.studentsessions.Add(studentsession);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            ViewBag.session_sessionID = new SelectList(db.sessions, "sessionID", "Date", studentsession.session_sessionID);
-            ViewBag.student_StudentID = new SelectList(db.students, "StudentID", "GivenName", studentsession.student_StudentID);
-            return View(studentsession);
-        }
+        
 
         // GET: Teacher/Edit/5
         public ActionResult Edit(int? session_sessionID, string student_StudentID)
@@ -126,31 +101,7 @@ namespace EATApp.Controllers
             return View(studentsession);
         }
 
-        // GET: Teacher/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            studentsession studentsession = db.studentsessions.Find(id);
-            if (studentsession == null)
-            {
-                return HttpNotFound();
-            }
-            return View(studentsession);
-        }
-
-        // POST: Teacher/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            studentsession studentsession = db.studentsessions.Find(id);
-            db.studentsessions.Remove(studentsession);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        
 
         protected override void Dispose(bool disposing)
         {
