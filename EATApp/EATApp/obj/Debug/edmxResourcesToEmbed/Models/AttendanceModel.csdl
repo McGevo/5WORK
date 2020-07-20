@@ -131,8 +131,9 @@
     </Key>
     <Property Name="sessionID" Type="Int32" Nullable="false" />
     <Property Name="Date" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="StartTime" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="StartTime" Type="Time" Precision="7" />
     <Property Name="LecturerID" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="lecturer" Relationship="Self.session_FK_session_lecturer" FromRole="session" ToRole="lecturer" />
     <NavigationProperty Name="studentsessions" Relationship="Self.studentsession_fk_StudentSession_session1" FromRole="session" ToRole="studentsession" />
   </EntityType>
@@ -184,8 +185,8 @@
       <PropertyRef Name="session_sessionID" />
       <PropertyRef Name="student_StudentID" />
     </Key>
-    <Property Name="SignIn" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="SignOut" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SignIn" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="SignOut" Type="Time" Precision="7" />
     <Property Name="session_sessionID" Type="Int32" Nullable="false" />
     <Property Name="student_StudentID" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="session" Relationship="Self.studentsession_fk_StudentSession_session1" FromRole="studentsession" ToRole="session" />

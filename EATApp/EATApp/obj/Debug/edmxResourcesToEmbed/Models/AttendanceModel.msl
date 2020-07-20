@@ -117,6 +117,7 @@
           <ScalarProperty Name="Date" ColumnName="Date" />
           <ScalarProperty Name="StartTime" ColumnName="StartTime" />
           <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0f3ef71a17e54d438c196125f7a3411b" Name="Diagram1">
+      <Diagram DiagramId="10bfef491c3b40c0bd24eb366053cdbf" Name="Diagram1">
         <EntityTypeShape EntityType="TafeDBModel.campu" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
         <EntityTypeShape EntityType="TafeDBModel.competency" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
         <EntityTypeShape EntityType="TafeDBModel.competency_qualification" Width="1.5" PointX="13" PointY="1.875" IsExpanded="true" />
@@ -15,7 +15,7 @@
         <EntityTypeShape EntityType="TafeDBModel.department" Width="1.5" PointX="12.75" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="TafeDBModel.lecturer" Width="1.5" PointX="6" PointY="2" IsExpanded="true" />
         <EntityTypeShape EntityType="TafeDBModel.qualification" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TafeDBModel.session" Width="1.5" PointX="8.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TafeDBModel.session" Width="1.5" PointX="8.25" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="TafeDBModel.student" Width="1.5" PointX="8.25" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="TafeDBModel.student_grade" Width="1.5" PointX="10.5" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="TafeDBModel.student_studyplan" Width="1.5" PointX="10.5" PointY="13.125" IsExpanded="true" />

@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using EATApp.Models;
 
+
 namespace EATApp.Controllers
 {
     public class TeacherController : Controller
@@ -20,6 +21,7 @@ namespace EATApp.Controllers
             var studentsessions = db.studentsessions.Include(s => s.session).Include(s => s.student);
             return View(studentsessions.ToList());
         }
+
 
         // GET: Teacher/Details/5
         public ActionResult Details(int? session_sessionID, string student_StudentID)
@@ -56,8 +58,10 @@ namespace EATApp.Controllers
             //ViewBag.session_sessionID = new SelectList(db.sessions, "sessionID", "Date");
             //ViewBag.student_StudentID = new SelectList(db.students, "StudentID", "GivenName");
             //return View();
+            ViewBag.Message = student_StudentID;
 
-            return View(studentsession);
+            var studentsessions = db.studentsessions.Include(s => s.session).Include(s => s.student);
+            return View(studentsessions);
         }
 
         // GET: Teacher/Create

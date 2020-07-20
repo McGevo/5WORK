@@ -110,8 +110,9 @@
     </Key>
     <Property Name="sessionID" Type="int" Nullable="false" />
     <Property Name="Date" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="StartTime" Type="time" Precision="7" Nullable="false" />
+    <Property Name="StartTime" Type="time" Precision="7" />
     <Property Name="LecturerID" Type="varchar" MaxLength="9" />
+    <Property Name="Code" Type="varchar" MaxLength="16" Nullable="false" />
   </EntityType>
   <EntityType Name="student">
     <Key>
@@ -152,8 +153,8 @@
       <PropertyRef Name="session_sessionID" />
       <PropertyRef Name="student_StudentID" />
     </Key>
-    <Property Name="SignIn" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="SignOut" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="SignIn" Type="time" Precision="7" Nullable="false" />
+    <Property Name="SignOut" Type="time" Precision="7" />
     <Property Name="session_sessionID" Type="int" Nullable="false" />
     <Property Name="student_StudentID" Type="varchar" MaxLength="9" Nullable="false" />
   </EntityType>

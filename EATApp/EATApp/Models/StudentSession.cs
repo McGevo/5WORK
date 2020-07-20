@@ -14,8 +14,8 @@ namespace EATApp.Models
     
     public partial class studentsession
     {
-        public string SignIn { get; set; }
-        public string SignOut { get; set; }
+        public System.TimeSpan SignIn { get; set; }
+        public Nullable<System.TimeSpan> SignOut { get; set; }
         public int session_sessionID { get; set; }
         public string student_StudentID { get; set; }
     

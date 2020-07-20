@@ -1,4 +1,4 @@
-﻿@model EATApp.Models.studentsession
+﻿@model IEnumerable<EATApp.Models.studentsession>
 
 @{
     ViewBag.Title = "Details";
@@ -6,64 +6,63 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>studentsession</h4>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.SignIn)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SignIn)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SignOut)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SignOut)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.session.Date)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.session.Date)
-        </dd>
-        </dl>
-
-
-        @foreach (var item in Model)
+<h3>
+    @{
+        var details = Model.ToList();
+        EATApp.Models.student student = null;
+        foreach (var d in details)
         {
-            <tr>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.session.Date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.student.GivenName)
-                </td>
-                <td>
-                    @Html.DisplayNameFor(model => model.student.LastName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SignIn)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SignOut)
-                </td>
-
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { student_StudentID = item.student_StudentID, session_sessionID = item.session_sessionID }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>
-            </tr>
+            if (d.student_StudentID.Equals(ViewBag.Message))
+            {
+                student = d.student;
+            }
         }
+        var headingString = student.StudentID + " " + student.GivenName + " " + student.LastName;
+        @Html.DisplayFor(m => headingString)
+    }
+</h3>
 
-        @*<p>
-            @Html.ActionLink("Edit", "Edit", new { student_StudentID = item.student_StudentID, session_sessionID = item.session_sessionID }) |
-            @Html.ActionLink("Back to List", "Index")
-        </p>*@
+<table class="table">
+    <tr>
+        <th>
+            Date
+        </th>
+        <th>
+            Sign In
+        </th>
+        <th>
+            Sign Out
+        </th>
+        <th>
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Where(s => s.student_StudentID.Contains(ViewBag.Message)))
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.session.Date)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.SignIn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SignOut)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { student_StudentID = item.student_StudentID, session_sessionID = item.session_sessionID })
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+
+@*<p>
+        @Html.ActionLink("Edit", "Edit", new { student_StudentID = item.student_StudentID, session_sessionID = item.session_sessionID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
