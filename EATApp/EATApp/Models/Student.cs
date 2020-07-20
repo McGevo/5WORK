@@ -33,7 +33,7 @@ namespace EATApp.Models
         [DisplayName("Email")]
         [Required(ErrorMessage = "Email required")]
         public string EmailAddress { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<student_grade> student_grade { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -22,8 +22,9 @@ namespace EATApp.Models
     
         public int sessionID { get; set; }
         public string Date { get; set; }
-        public System.TimeSpan StartTime { get; set; }
+        public Nullable<System.TimeSpan> StartTime { get; set; }
         public string LecturerID { get; set; }
+        public string Code { get; set; }
     
         public virtual lecturer lecturer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

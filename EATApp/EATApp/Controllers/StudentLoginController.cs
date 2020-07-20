@@ -20,7 +20,7 @@ namespace EATApp.Controllers
         {
             using (TafeDBEntities db = new TafeDBEntities())
             {
-                var userDetails = db.students.Where(x => x.EmailAddress == studentModel.EmailAddress && x.StudentID == studentModel.StudentID).FirstOrDefault();
+                student userDetails = db.students.Where(x => x.EmailAddress == studentModel.EmailAddress && x.StudentID == studentModel.StudentID).FirstOrDefault();
                 if (userDetails == null)
                 {
                     studentModel.LoginErrorMessage = "Email or Password is incorrect";
@@ -29,7 +29,7 @@ namespace EATApp.Controllers
                 else
                 {
                     Session["userID"] = userDetails.StudentID;
-                    return RedirectToAction("StudentView", "Teacher");
+                    return RedirectToAction("Index", "attendance");
                 }
             }
 
