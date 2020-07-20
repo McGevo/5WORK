@@ -17,6 +17,7 @@ namespace EATApp
                 name: "Default",
                 url: "{controller}/{action}/{id}",
 
+
                 defaults: new { controller = "Home", action = "HomeView", id = UrlParameter.Optional }
             );
         }

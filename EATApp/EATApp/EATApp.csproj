@@ -227,6 +227,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AttendanceModel.edmx</DependentUpon>
       <LastGenOutput>AttendanceModel.Context.cs</LastGenOutput>
+
     </Content>
     <Content Include="Models\AttendanceModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -267,8 +268,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Teacher\StudentView.cshtml" />
-    <Content Include="Views\Teacher\ClassView.cshtml" />
+
+
+
     <Content Include="Views\Teacher\View.cshtml" />
     <Content Include="Views\attendance\Create.cshtml" />
     <Content Include="Views\attendance\Delete.cshtml" />
@@ -276,6 +278,11 @@
     <Content Include="Views\attendance\Edit.cshtml" />
     <Content Include="Views\attendance\Index.cshtml" />
     <Content Include="Views\Home\HomeView.cshtml" />
+    <Content Include="Views\Teacher\Create.cshtml" />
+    <Content Include="Views\Teacher\Delete.cshtml" />
+    <Content Include="Views\Teacher\Details.cshtml" />
+    <Content Include="Views\Teacher\Edit.cshtml" />
+    <Content Include="Views\Teacher\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

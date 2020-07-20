@@ -1,0 +1,68 @@
+﻿@model IEnumerable<EATApp.Models.studentsession>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h3>
+    @{
+        var details = Model.ToList();
+        EATApp.Models.student student = null;
+        foreach (var d in details)
+        {
+            if (d.student_StudentID.Equals(ViewBag.Message))
+            {
+                student = d.student;
+            }
+        }
+        var headingString = student.StudentID + " " + student.GivenName + " " + student.LastName;
+        @Html.DisplayFor(m => headingString)
+    }
+</h3>
+
+<table class="table">
+    <tr>
+        <th>
+            Date
+        </th>
+        <th>
+            Sign In
+        </th>
+        <th>
+            Sign Out
+        </th>
+        <th>
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Where(s => s.student_StudentID.Contains(ViewBag.Message)))
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.session.Date)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.SignIn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SignOut)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { student_StudentID = item.student_StudentID, session_sessionID = item.session_sessionID })
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+
+@*<p>
+        @Html.ActionLink("Edit", "Edit", new { student_StudentID = item.student_StudentID, session_sessionID = item.session_sessionID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@

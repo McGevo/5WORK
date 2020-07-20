@@ -11,14 +11,17 @@ namespace EATApp.Models
 {
     using System;
     using System.Collections.Generic;
+
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
 
     public partial class student
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+
         public student()
         {
+
             this.student_grade = new HashSet<student_grade>();
             this.student_studyplan = new HashSet<student_studyplan>();
             this.studentsessions = new HashSet<studentsession>();
@@ -43,4 +46,5 @@ namespace EATApp.Models
 
         public string LoginErrorMessage { get; set; }
     }
+
 }

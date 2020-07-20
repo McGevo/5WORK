@@ -11,10 +11,12 @@ namespace EATApp.Models
 {
     using System;
     using System.Collections.Generic;
+
     using System.ComponentModel.DataAnnotations;
 
     public partial class studentsession
     {
+
 
         private System.TimeSpan signIn;
 
@@ -41,4 +43,5 @@ namespace EATApp.Models
         }
 
     }
+
 }
