@@ -16,9 +16,15 @@ namespace EATApp.Controllers
         private TafeDBEntities db = new TafeDBEntities();
 
         // GET: Teacher
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             var studentsessions = db.studentsessions.Include(s => s.session).Include(s => s.student);
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                studentsessions = studentsessions.Where(s => s.student.LastName.Contains(searchString)
+                                       || s.student.GivenName.Contains(searchString));
+            }
             return View(studentsessions.ToList());
         }
 

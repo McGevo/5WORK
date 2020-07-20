@@ -12,6 +12,14 @@
         @Html.Hidden("DateCreated", DateTime.Today)
     </div>
 </p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
 <table class="table">
     <tr>
         <th>
