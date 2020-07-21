@@ -11,51 +11,58 @@
     <title>HomeView</title>
     <style>
         #button {
-            background-color: #f44336;
+            background-color: #e69100;
             border: none;
             color: white;
             padding: 30px 60px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 20px;
+            font-size: 30px;
+            border-radius: 12px
         }
 
         #Home-div {
             position: absolute;
-            left: 40%;
+            left: 35%;
             top: 40%;
-            
         }
 
         #Heading {
             position: absolute;
-            left: 40%;
-            top: 10%;
+            left: 35%;
+            top: 25%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
         }
 
         body {
             background-image: url('../../Content/Images/adelaide-city.jpg');
         }
 
+        .divider {
+            width: 90px;
+            height: auto;
+            display: inline-block;
+        }
     </style>
-   
+
 </head>
 <body>
-        <h1 id="Heading">Employee Attendance Tracker</h1>
+    <h1 id="Heading">Employee Attendance Tracker</h1>
     <div id="Home-div">
-      
-       
-            
-                    <input id="button" type="button" value="Lecturer" onclick="location.href='@Url.Action("LecturerLoginPage", "Home")'" />
-          
-      
-          
-              
-                    <input id="button" type="button" value="Employee" onclick="location.href='@Url.Action("StudentLoginPage", "Home")'" />
-             
-            
-        
+
+
+
+        <input id="button" type="button" value="Lecturer" onclick="location.href='@Url.Action("LecturerLoginPage", "Home")'" />
+
+        <div class="divider" />
+    </div>
+
+    <input id="button" type="button" value="Student" onclick="location.href='@Url.Action("StudentLoginPage", "Home")'" />
+
+
+
     </div>
 </body>
 </html>
