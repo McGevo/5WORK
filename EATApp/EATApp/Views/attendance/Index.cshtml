@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<EATApp.Models.studentsession>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Employee Attendance";
 }
 
-<h2>Index</h2>
+    <h2>Employee Attendance</h2>
 
 <p>
     @Html.ActionLink("Enter Code", "Create")
@@ -12,13 +12,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.SignIn)
+            Sign In
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SignOut)
+            Sign Out
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.session.Date)
+            Date
         </th>
 
         <th></th>
@@ -35,7 +35,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.session.Date)
         </td>
-
+        
 
     </tr>
 }

@@ -1,17 +1,17 @@
 ﻿@model EATApp.Models.studentsession
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Attendance";
 }
 
-<h2>Edit</h2>
+    <h2>Edit Attendance</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>studentsession</h4>
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

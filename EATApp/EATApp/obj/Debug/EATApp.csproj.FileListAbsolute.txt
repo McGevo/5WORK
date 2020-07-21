@@ -478,7 +478,6 @@ H:\TafeSA\5WORK\Sign In Project\EATRepos\EATApp\EATApp\obj\Debug\EATApp.csproj.C
 H:\TafeSA\5WORK\Sign In Project\EATRepos\EATApp\EATApp\obj\Debug\EATApp.dll
 H:\TafeSA\5WORK\Sign In Project\EATRepos\EATApp\EATApp\obj\Debug\EATApp.pdb
 H:\TafeSA\5WORK\Sign In Project\EATRepos\EATApp\EATApp\obj\Debug\EATApp.csprojAssemblyReference.cache
-H:\TafeSA\5WORK\Sign In Project\5WORK\EATApp\EATApp\obj\Debug\EATApp.csprojAssemblyReference.cache
 H:\TafeSA\5WORK\Sign In Project\5WORK\EATApp\EATApp\obj\Debug\EATApp.csproj.CoreCompileInputs.cache
 H:\TafeSA\5WORK\Sign In Project\5WORK\EATApp\EATApp\obj\Debug\EATApp.dll
 H:\TafeSA\5WORK\Sign In Project\5WORK\EATApp\EATApp\obj\Debug\EATApp.pdb
@@ -561,3 +560,4 @@ H:\TafeSA\5WORK\Sign In Project\5WORK\EATApp\EATApp\bin\Newtonsoft.Json.xml
 H:\TafeSA\5WORK\Sign In Project\5WORK\EATApp\EATApp\bin\Antlr3.Runtime.pdb
 H:\TafeSA\5WORK\Sign In Project\5WORK\EATApp\EATApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 H:\TafeSA\5WORK\Sign In Project\5WORK\EATApp\EATApp\obj\Debug\EATApp.csproj.CopyComplete
+H:\TafeSA\5WORK\Sign In Project\5WORK\EATApp\EATApp\obj\Debug\EATApp.csprojAssemblyReference.cache

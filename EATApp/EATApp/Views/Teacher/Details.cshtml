@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<EATApp.Models.studentsession>
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Employee Attendance Records";
 }
 
-<h2>Details</h2>
+    <h2>Employee Attendance Records</h2>
 
 <h3>
     @{
@@ -59,7 +59,9 @@
     }
 </table>
 
-
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
 
 
 @*<p>
